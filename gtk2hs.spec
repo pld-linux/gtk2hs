@@ -8,8 +8,8 @@
 
 %define ghclibdir %{_libdir}/ghc-%{ghc_version}
 
-Summary:	A Haskell GUI library based on the Gtk+ GUI toolkit
-Summary(pl.UTF-8):	Biblioteka GUI dla Haskella oparta na Gtk+
+Summary:	A Haskell GUI library based on the GTK+ GUI toolkit
+Summary(pl.UTF-8):	Biblioteka GUI dla Haskella oparta na GTK+
 Name:		gtk2hs
 Version:	0.9.11
 Release:	0.2
@@ -38,13 +38,20 @@ Requires:	gtk2hs-glib = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-A Gtk+ binding for the functional language Haskell featuring automatic
+A GTK+ binding for the functional language Haskell featuring automatic
 memory management, unicode support, and wide coverage of widgets up to
-Gtk+ 2.2 as well as some 2.4 widgets such as the new file chooser
+GTK+ 2.2 as well as some 2.4 widgets such as the new file chooser
 dialog.
 
+%description -l pl.UTF-8
+Dowiązanie GTK+ dla języka funkcyjnego Haskell z automatycznym
+zarządzeniem pamięcią, obsługą unikodu i szerokim pokryciem widgetów
+do wersji GTK+ 2.2, a także częścią widgetów 2.4, takich jak nowe okno
+dialogowe wyboru plików.
+
 %package cairo
-Summary:	Haskell binding for cairo
+Summary:	Haskell cairo binding for gtk2hs
+Summary(pl.UTF-8):	Dowiązanie cairo do Haskella dla gtk2hs
 Group:		Development/Libraries
 #Group:		Development/Languages/Haskell
 Requires(post,preun):	%{_bindir}/ghc-pkg
@@ -52,10 +59,14 @@ Requires:	cairo-devel >= 1.0.0
 %requires_eq	ghc
 
 %description cairo
-A cairo binding for gtk2hs.
+Haskell cairo binding for gtk2hs.
+
+%description cairo -l pl.UTF-8
+Dowiązanie cairo do Haskella dla gtk2hs.
 
 %package gconf
-Summary:	Haskell binding for GConf
+Summary:	Haskell GConf binding for gtk2hs
+Summary(pl.UTF-8):	Dowiązanie GConfa do Haskella dla gtk2hs
 Group:		Development/Libraries
 #Group:		Development/Languages/Haskell
 Requires(post,preun):	%{_bindir}/ghc-pkg
@@ -64,10 +75,14 @@ Requires:	GConf2-devel
 Requires:	gtk2hs-glib = %{version}-%{release}
 
 %description gconf
-A GConf binding for gtk2hs.
+Haskell GConf binding for gtk2hs.
+
+%description gconf -l pl.UTF-8
+Dowiązanie GConfa do Haskella dla gtk2hs.
 
 %package glade
-Summary:	Haskell binding of glade for gtk2hs
+Summary:	Haskell Glade binding for gtk2hs
+Summary(pl.UTF-8):	Dowiązanie Glade do Haskella dla gtk2hs
 Group:		Development/Libraries
 #Group:		Development/Languages/Haskell
 Requires(post,preun):	%{_bindir}/ghc-pkg
@@ -76,10 +91,14 @@ Requires:	libglade2-devel
 Requires:	gtk2hs = %{version}-%{release}
 
 %description glade
-A Glade2 binding for gtk2hs.
+Haskell Glade2 binding for gtk2hs.
+
+%description glade -l pl.UTF-8
+Dowiązanie Glade2 do Haskella dla gtk2hs.
 
 %package glib
-Summary:	Haskell binding for glib
+Summary:	Haskell glib binding for gtk2hs
+Summary(pl.UTF-8):	Dowiązanie gliba do Haskella dla gtk2hs
 Group:		Development/Libraries
 #Group:		Development/Languages/Haskell
 Requires(post,preun):	%{_bindir}/ghc-pkg
@@ -87,10 +106,14 @@ Requires(post,preun):	%{_bindir}/ghc-pkg
 Requires:	glib2-devel
 
 %description glib
-A glib binding for gtk2hs.
+Haskell glib binding for gtk2hs.
+
+%description glib -l pl.UTF-8
+Dowiązanie gliba do Haskella dla gtk2hs.
 
 %package mozembed
-Summary:	Haskell binding for gtkembedmoz
+Summary:	Haskell gtkembedmoz binding for gtk2hs
+Summary(pl.UTF-8):	Dowiązanie gtkembedmoz do Haskella dla gtk2hs
 Group:		Development/Libraries
 #Group:		Development/Languages/Haskell
 Requires(post,preun):	%{_bindir}/ghc-pkg
@@ -99,10 +122,14 @@ Requires:	gtk2hs = %{version}-%{release}
 Requires:	xulrunner-devel
 
 %description mozembed
-A GtkEmbedMoz binding for gtk2hs.
+Haskell GtkEmbedMoz binding for gtk2hs.
+
+%description mozembed -l pl.UTF-8
+Dowiązanie gtkembedmoz do Haskella dla gtk2hs.
 
 %package sourceview
-Summary:	Haskell binding for gtksourceview
+Summary:	Haskell gtksourceview binding for gtk2hs
+Summary(pl.UTF-8):	Dowiązanie gtksourceview do Haskella dla gtk2hs
 Group:		Development/Libraries
 #Group:		Development/Languages/Haskell
 Requires(post,preun):	%{_bindir}/ghc-pkg
@@ -111,10 +138,14 @@ Requires:	gtk2hs = %{version}-%{release}
 Requires:	gtksourceview-devel
 
 %description sourceview
-A GtkSourceView binding for gtk2hs.
+Haskell GtkSourceView binding for gtk2hs.
+
+%description sourceview -l pl.UTF-8
+Dowiązanie gtksourceview do Haskella dla gtk2hs.
 
 %package gtkglext
-Summary:	Haskell binding for gtkglext
+Summary:	Haskell gtkglext binding for gtk2hs
+Summary(pl.UTF-8):	Dowiązanie gtkglext do Haskella dla gtk2hs
 Group:		Development/Libraries
 #Group:		Development/Languages/Haskell
 Requires(post,preun):	%{_bindir}/ghc-pkg
@@ -123,7 +154,10 @@ Requires:	gtk2hs = %{version}-%{release}
 Requires:	gtkglext-devel >= 1.0.5
 
 %description gtkglext
-A GtkGLExt binding for gtk2hs.
+Haskell GtkGLExt binding for gtk2hs.
+
+%description gtkglext -l pl.UTF-8
+Dowiązanie gtkglext do Haskella dla gtk2hs.
 
 %prep
 %setup -q
