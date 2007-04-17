@@ -2,7 +2,7 @@
 # TODO: SVG
 #
 # Conditional build:
-%bcond_without	docs		# don't build html documentation
+%bcond_without	doc		# don't build html documentation
 #
 %define ghc_version %(LC_ALL="C" ghc -V | sed 's/.*version //')
 
@@ -26,7 +26,7 @@ BuildRequires:	glib2-devel
 BuildRequires:	gtk+2-devel
 BuildRequires:	gtkglext-devel >= 1.0.5
 BuildRequires:	gtksourceview-devel
-%{?with_docs:BuildRequires:	haddock}
+%{?with_doc:BuildRequires:	haddock}
 BuildRequires:	libglade2-devel
 BuildRequires:	librsvg-devel >= 1:2.16.0
 BuildRequires:	xulrunner-devel
@@ -166,7 +166,7 @@ Dowiązanie gtkglext do Haskella dla gtk2hs.
 %configure \
 	--with-hcflags="-O"  \
 	--libdir=%{ghclibdir} \
-	%{?with_docs:--enable-docs} \
+	%{?with_doc:--enable-docs} \
 	--enable-libglade \
 	--enable-gconf \
 	--enable-sourceview \
@@ -260,7 +260,7 @@ fi
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog TODO
-%{?with_docs:%doc docs/reference}
+%{?with_doc:%doc docs/reference}
 %{ghclibdir}/gtk2hs/gtk.package.conf
 %{ghclibdir}/gtk2hs/soegtk.package.conf
 %{ghclibdir}/gtk2hs/HSgtk.o
