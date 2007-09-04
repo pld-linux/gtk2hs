@@ -15,7 +15,7 @@ License:	LGPL
 Group:		Development/Libraries
 #Group:		Development/Languages/Haskell
 Source0:	http://downloads.sourceforge.net/gtk2hs/%{name}-%{version}.tar.gz
-# Source0-md5:	a59f19d15ae0cab976722dbf3a09fc14
+# Source0-md5:	32752a42c225f55b0280151f8e19a3ed
 URL:		http://haskell.org/gtk2hs/
 BuildRequires:	GConf2-devel
 BuildRequires:	cairo-devel >= 1.0.0
