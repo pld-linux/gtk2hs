@@ -1,6 +1,4 @@
 #
-# TODO: SVG
-#
 # Conditional build:
 %bcond_without	doc		# don't build html documentation
 #
@@ -11,8 +9,8 @@
 Summary:	A Haskell GUI library based on the GTK+ GUI toolkit
 Summary(pl.UTF-8):	Biblioteka GUI dla Haskella oparta na GTK+
 Name:		gtk2hs
-Version:	0.9.11
-Release:	0.2
+Version:	0.9.12
+Release:	0.1
 License:	LGPL
 Group:		Development/Libraries
 #Group:		Development/Languages/Haskell
