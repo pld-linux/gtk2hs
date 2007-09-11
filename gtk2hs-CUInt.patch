@@ -1,0 +1,12 @@
+diff -urN gtk2hs-0.9.12/tools/hierarchyGen/Hierarchy.chs.template gtk2hs-0.9.12-darcs/tools/hierarchyGen/Hierarchy.chs.template
+--- gtk2hs-0.9.12/tools/hierarchyGen/Hierarchy.chs.template	2007-06-27 22:54:19.000000000 +0200
++++ gtk2hs-0.9.12-darcs/tools/hierarchyGen/Hierarchy.chs.template	2007-09-11 14:17:56.279138397 +0200
+@@ -31,7 +31,7 @@
+   ) where
+ 
+ import Foreign.ForeignPtr (ForeignPtr, castForeignPtr, unsafeForeignPtrToPtr)
+-import Foreign.C.Types    (CULong)
++import Foreign.C.Types    (CULong, CUInt)
+ import System.Glib.GType	(GType, typeInstanceIsA)
+ import GHC.Base			(unsafeCoerce#)
+ @IMPORT_PARENT@
